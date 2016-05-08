@@ -1,0 +1,13 @@
+{
+  "name": "shady-background",
+  "description": "Shady Business background tasks",
+  "version": "0.0.1",
+  "contributors": [ ],
+  "dependencies": {
+    "worldscanner": "0.1.1",
+    "shady-messages": "latest",
+    "shady-model": "latest",
+    "shady-search": "latest"
+  },
+  "readmeFilename": "README.md"
+}
