@@ -83,8 +83,8 @@
     }
     
     _onVenueDiscovered (venue) {
-      var CategoryModel = ShadyModel.model('Category');
-      var PlaceModel = ShadyModel.model('Place');
+      var CategoryModel = ShadyModel.Category;
+      var PlaceModel = ShadyModel.Place;
       
       if (venue && venue.location) {
         var categoryIds = null;

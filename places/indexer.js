@@ -55,7 +55,7 @@
     
     _onSystemReindexPlaces (event, data) {
       console.log("Going to reindex all places");
-      ShadyModel.model('Place').find({}, { select: ['id'], fetchSize: 2147483647 }, function (err, idRows) {
+      ShadyModel.Place.find({}, { select: ['id'], fetchSize: 2147483647 }, function (err, idRows) {
         var ids = _.pluck(idRows, 'id');
         
         var idCount = ids.length;
@@ -64,7 +64,7 @@
 
         var indexTasks = _.map(idGroups, function (groupIds) {
           return function (callback) {
-            ShadyModel.model('Place').find({ id : { '$in': groupIds }}, function (loadErr, places) {
+            ShadyModel.Place.find({ id : { '$in': groupIds }}, function (loadErr, places) {
               if (loadErr) {
                 callback(loadErr);
               } else {
